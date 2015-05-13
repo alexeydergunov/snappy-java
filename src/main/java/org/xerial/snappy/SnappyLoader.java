@@ -302,7 +302,7 @@ public class SnappyLoader
         // Temporary folder for the native lib. Use the value of org.xerial.snappy.tempdir or java.io.tmpdir
         File tempFolder = new File(System.getProperty(KEY_SNAPPY_TEMPDIR, System.getProperty("java.io.tmpdir")));
         if (!tempFolder.exists()) {
-            tempFolder.mkdir();
+            tempFolder.mkdirs();
         }
 
         // Extract and load a native library inside the jar file
